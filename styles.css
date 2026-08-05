@@ -18,6 +18,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    scroll-padding-top: 90px; /* Keeps your sticky header from covering up the section titles */
 }
 
 body {
