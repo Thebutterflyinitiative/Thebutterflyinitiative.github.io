@@ -3,13 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Butterfly Initiative | Community Resilience & Urban Regeneration</title>
+    <title>The Butterfly Initiative | Making Neighborhoods Livable</title>
     <!-- ProfessionalTypography: Inter & Cormorant Garamond -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Fancy Scrolling Parallax Styles for our Bug Overlords -->
+    <style>
+        .parallax {
+            position: relative;
+            min-height: 60vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 4rem 0;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+        }
+        
+        /* Replace these URLs with your actual image paths! */
+        .parallax-monarch {
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('./mon.jpg');
+            background-color: #d95c14; /* Fallback color */
+        }
+        .parallax-luna {
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('./luna.jpg');
+            background-color: #a8e6cf; /* Fallback color */
+        }
+        .parallax-cicada {
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('./cicada.jpg');
+            background-color: #ff8b94; /* Fallback color */
+        }
+
+        .parallax-content {
+            text-align: center;
+            color: #ffffff;
+            padding: 2.5rem;
+            border: 2px dashed rgba(255, 255, 255, 0.4);
+            border-radius: 16px;
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            max-width: 600px;
+            margin: 0 1.5rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .parallax-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .parallax-content p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            line-height: 1.6;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        }
+    </style>
 </head>
 <body>
 
@@ -22,10 +81,10 @@
             </a>
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#mission" class="nav-link-item">Mission</a></li>
-                <li><a href="#action" class="nav-link-item">Action Plan</a></li>
-                <li><a href="#impact" class="nav-link-item">Impact</a></li>
-                <li><a href="#action" class="nav-cta nav-link-item">Get Involved</a></li>
+                <li><a href="#mission" class="nav-link-item">What We Do</a></li>
+                <li><a href="#action" class="nav-link-item">The Plan</a></li>
+                <li><a href="#impact" class="nav-link-item">The Payoff</a></li>
+                <li><a href="#action" class="nav-cta nav-link-item">Pitch In</a></li>
             </ul>
         </div>
     </header>
@@ -35,13 +94,13 @@
         <div class="hero-bg-glow"></div>
         <div class="hero-content animate-fade-in">
             <div class="badge">
-                <span>✨</span> Lunar Moth Inspired Community Resilience
+                <span>✨</span> Less Melting, More Living
             </div>
-            <h1>Cultivating Dignity, <br><span>Cooling Our Communities</span></h1>
-            <p>A proactive game plan addressing extreme urban heatwaves, food insecurity, and neighborhood neglect—building a sustainable, livable future for today and tomorrow.</p>
+            <h1>Making Our Streets <br><span>Cooler (Literally)</span></h1>
+            <p>Let's be real: summer is trying to cook us, groceries cost a kidney, and our sidewalks are sad. Here’s our plan to plant free food, create actual shade, and make our neighborhoods livable before we all turn to dust.</p>
             <div class="hero-buttons">
-                <a href="#action" class="btn btn-primary">Explore Our Game Plan</a>
-                <a href="#mission" class="btn btn-secondary">Our Core Mission</a>
+                <a href="#action" class="btn btn-primary">See the Game Plan</a>
+                <a href="#mission" class="btn btn-secondary">Why We're Here</a>
             </div>
         </div>
     </section>
@@ -51,39 +110,47 @@
         <div class="stats-grid">
             <div class="stat-item">
                 <h3>100°F+</h3>
-                <p>Record Summer Heat Waves</p>
+                <p>Awful Summer Days</p>
             </div>
             <div class="stat-item">
                 <h3>100%</h3>
-                <p>Free Edible Perennials</p>
+                <p>Free Street Snacks</p>
             </div>
             <div class="stat-item">
                 <h3>Permanent</h3>
-                <p>Shade & Public Rest Spaces</p>
+                <p>Places to Actually Sit</p>
             </div>
         </div>
     </div>
 
+    <!-- PARALLAX 1: THE MONARCH -->
+    <section class="parallax parallax-monarch">
+        <div class="parallax-content animate-fade-in">
+            <h2>The Monarch</h2>
+            <p>Beautiful, majestic, and completely toxic to anything stupid enough to eat it. A true neighborhood icon.</p>
+        </div>
+    </section>
+
     <!-- Core Objectives Section -->
-    <section class="container" id="mission">
+    <section class="container" id="mission" style="padding-top: 2rem;">
         <div class="section-header animate-fade-in">
-            <h2>Rooted in Purpose</h2>
-            <p>We deploy targeted interventions where communities need help the most, transforming neglected urban corridors into thriving, resilient ecosystems.</p>
+            <h2>What We're Actually Doing</h2>
+            <p>We step in where neighborhoods have been ignored for too long. We turn miserable concrete blocks into green spaces that don't make you depressed.</p>
         </div>
         <div class="grid-3">
             <div class="card animate-fade-in-stagger-1">
                 <div>
                     <div class="card-icon">🌡️</div>
-                    <h3>Climate Mitigation</h3>
-                    <p>Combat worsening urban heat islands through strategic canopy expansion, cooling shade architecture, and drought-resilient green landscaping.</p>
+                    <h3>Beating the Heat</h3>
+                    <p>Planting trees and building shade so you don't spontaneously combust while walking down the street during a heatwave.</p>
                 </div>
                 <div class="card-resources">
-                    <div class="resources-title">Environmental Research</div>
+                    <div class="resources-title">The Science Stuff</div>
                     <a href="https://www.epa.gov/heattislands" target="_blank" rel="noopener noreferrer" class="rich-resource-link">
                         <div class="resource-icon-badge">🌤️</div>
                         <div class="resource-info">
                             <h4>EPA Heat Island Guide ↗</h4>
-                            <p>Official strategies for cooling urban environments and lowering neighborhood temperatures.</p>
+                            <p>How the pros lower temperatures in hot, concrete-heavy cities.</p>
                         </div>
                     </a>
                 </div>
@@ -91,16 +158,16 @@
             <div class="card animate-fade-in-stagger-2">
                 <div>
                     <div class="card-icon">🏗️</div>
-                    <h3>Infrastructure Restoration</h3>
-                    <p>Restore immediate safety and aesthetic dignity to high-need apartment complexes by clearing debris, repairing walkways, and fixing siding.</p>
+                    <h3>Fixing Broken Stuff</h3>
+                    <p>Cleaning up trash, fixing cracked sidewalks, and repairing battered apartment sidings so people can actually feel good about where they live.</p>
                 </div>
                 <div class="card-resources">
-                    <div class="resources-title">Community Development</div>
+                    <div class="resources-title">Neighborhood Help</div>
                     <a href="https://www.hud.gov" target="_blank" rel="noopener noreferrer" class="rich-resource-link">
                         <div class="resource-icon-badge">🏘️</div>
                         <div class="resource-info">
-                            <h4>HUD Community Development ↗</h4>
-                            <p>Frameworks for revitalizing distressed residential zones and building community equity.</p>
+                            <h4>HUD Community Guide ↗</h4>
+                            <p>Steps for rebuilding neglected residential areas.</p>
                         </div>
                     </a>
                 </div>
@@ -108,16 +175,16 @@
             <div class="card animate-fade-in-stagger-3">
                 <div>
                     <div class="card-icon">🌾</div>
-                    <h3>Long-Term Food Security</h3>
-                    <p>Establish permanent, low-maintenance edible perennial food sources in public rights-of-way to combat hunger directly at street level.</p>
+                    <h3>Free Food Everywhere</h3>
+                    <p>Planting fruit bushes and edible plants on public streets so anyone can grab a fresh snack on their way home. No wallet required.</p>
                 </div>
                 <div class="card-resources">
-                    <div class="resources-title">Agricultural Science</div>
+                    <div class="resources-title">Plant Knowledge</div>
                     <a href="https://www.perennialsolutions.org" target="_blank" rel="noopener noreferrer" class="rich-resource-link">
                         <div class="resource-icon-badge">🌱</div>
                         <div class="resource-info">
-                            <h4>Perennial Agriculture Institute ↗</h4>
-                            <p>Research and practical guides on sustainable food forests and edible landscaping.</p>
+                            <h4>Perennial Agriculture ↗</h4>
+                            <p>Guides on growing food that basically takes care of itself.</p>
                         </div>
                     </a>
                 </div>
@@ -125,31 +192,39 @@
         </div>
     </section>
 
+    <!-- PARALLAX 2: THE LUNA MOTH -->
+    <section class="parallax parallax-luna">
+        <div class="parallax-content animate-fade-in">
+            <h2>The Luna Moth</h2>
+            <p>Here for a good time, not a long time. Mostly because it literally doesn't have a mouth. Tragic, really.</p>
+        </div>
+    </section>
+
     <!-- Action Plan / Timeline Section -->
-    <section class="container" id="action" style="padding-top: 0;">
+    <section class="container" id="action" style="padding-top: 2rem;">
         <div class="section-header animate-fade-in">
-            <h2>The Operational Blueprint</h2>
-            <p>Our phased approach delivers rapid relief today while engineering permanent, self-sustaining community assets for the future.</p>
+            <h2>How We Fix It</h2>
+            <p>Our three-step plan to clean things up right now, and make sure they stay nice for a long time.</p>
         </div>
         <div class="timeline">
             <div class="timeline-card animate-fade-in-stagger-1">
                 <div>
                     <div class="timeline-number">01</div>
-                    <h3>Rapid Stabilization</h3>
-                    <p>Immediate tactical intervention to clean, repair, and restore comfort in vulnerable residential sectors.</p>
+                    <h3>Clean Up the Mess</h3>
+                    <p>Rolling up our sleeves to fix the immediate problems in the neighborhood.</p>
                     <ul class="timeline-list">
-                        <li>Debris and litter clearing from pedestrian pathways</li>
-                        <li>Sidewalk patching and exterior siding repair</li>
-                        <li><strong>Upcycling Community Wood:</strong> Repurposing fallen trees, stumps, and scrap lumber into durable public benches and resting nodes.</li>
+                        <li>Getting trash out of the walkways</li>
+                        <li>Patching holes and fixing broken walls</li>
+                        <li><strong>Building Cool Benches:</strong> Turning dead trees and scrap wood into sturdy places to sit.</li>
                     </ul>
                 </div>
                 <div class="card-resources">
-                    <div class="resources-title">Stabilization Protocol</div>
+                    <div class="resources-title">Our Rulebook</div>
                     <a href="https://www.hudexchange.info" target="_blank" rel="noopener noreferrer" class="rich-resource-link">
                         <div class="resource-icon-badge">📋</div>
                         <div class="resource-info">
-                            <h4>Neighborhood Stabilization Reference ↗</h4>
-                            <p>Best practices for blight remediation and local resource recycling initiatives.</p>
+                            <h4>Neighborhood Stabilization ↗</h4>
+                            <p>The smartest ways to clean up local blight and reuse materials.</p>
                         </div>
                     </a>
                 </div>
@@ -157,21 +232,21 @@
             <div class="timeline-card animate-fade-in-stagger-2">
                 <div>
                     <div class="timeline-number">02</div>
-                    <h3>Urban Greening</h3>
-                    <p>Transforming wasted space into blooming, heat-mitigating green corridors.</p>
+                    <h3>Plant Cool Stuff</h3>
+                    <p>Turning ugly, empty patches of dirt into blooming green spaces.</p>
                     <ul class="timeline-list">
-                        <li>Planting climate-hardy perennial food shrubs</li>
-                        <li>Resident-centric species consultation & input</li>
-                        <li>Water-wise establishment protocols (irrigation-free post-launch)</li>
+                        <li>Planting tough, edible bushes that can survive weird weather</li>
+                        <li>Asking you what you actually want planted</li>
+                        <li>Using plants that don't need constant watering</li>
                     </ul>
                 </div>
                 <div class="card-resources">
-                    <div class="resources-title">Forestry Handbook</div>
+                    <div class="resources-title">Tree Facts</div>
                     <a href="https://www.arborday.org" target="_blank" rel="noopener noreferrer" class="rich-resource-link">
                         <div class="resource-icon-badge">🌳</div>
                         <div class="resource-info">
-                            <h4>Arbor Day Urban Forestry ↗</h4>
-                            <p>Expert guides on tree canopy placement, species selection, and community greening.</p>
+                            <h4>Arbor Day Guides ↗</h4>
+                            <p>Advice on where to put trees so they actually do some good.</p>
                         </div>
                     </a>
                 </div>
@@ -179,21 +254,21 @@
             <div class="timeline-card animate-fade-in-stagger-3">
                 <div>
                     <div class="timeline-number">03</div>
-                    <h3>Generational Equity</h3>
-                    <p>Securing long-term habitability and freedom from economic distress for upcoming generations.</p>
+                    <h3>Keep It Going</h3>
+                    <p>Making sure this place stays livable so we don't have to apologize to our kids later.</p>
                     <ul class="timeline-list">
-                        <li>Decentralized free food availability on streets</li>
-                        <li>Lasting ambient cooling via urban forestry</li>
-                        <li>Empowering community-led neighborhood upkeep</li>
+                        <li>Free food that grows back every year</li>
+                        <li>Cooler streets thanks to fully grown trees</li>
+                        <li>Showing neighbors how to keep things looking sharp</li>
                     </ul>
                 </div>
                 <div class="card-resources">
-                    <div class="resources-title">Policy Framework</div>
+                    <div class="resources-title">The Long Game</div>
                     <a href="https://www.sustainability.gov" target="_blank" rel="noopener noreferrer" class="rich-resource-link">
                         <div class="resource-icon-badge">♻️</div>
                         <div class="resource-info">
-                            <h4>Federal Sustainability Guidelines ↗</h4>
-                            <p>Standards for circular economy practices, waste reduction, and long-term resilience.</p>
+                            <h4>Federal Sustainability ↗</h4>
+                            <p>Standards for reducing waste and surviving the future.</p>
                         </div>
                     </a>
                 </div>
@@ -201,22 +276,30 @@
         </div>
     </section>
 
+    <!-- PARALLAX 3: THE CICADA KILLER -->
+    <section class="parallax parallax-cicada">
+        <div class="parallax-content animate-fade-in">
+            <h2>The Cicada Killer</h2>
+            <p>Looks like a flying school bus. Harmless to you, but an absolute subterranean nightmare if you happen to be a cicada.</p>
+        </div>
+    </section>
+
     <!-- Vision Box Section -->
-    <section class="container" id="impact" style="padding-top: 0;">
+    <section class="container" id="impact" style="padding-top: 2rem;">
         <div class="vision-box animate-slide-up">
             <div class="vision-content">
-                <h2>Transforming Space Into Sustenance</h2>
-                <p>Imagine walking down a neighborhood sidewalk shaded by cooling foliage, sitting on a sturdy custom bench upcycled from local timber waste, and picking fresh perennial fruit right from the street. That is the future we are building.</p>
-                <a href="#hero" class="btn" style="background: var(--accent); color: var(--primary); max-width: 250px;">Support Our Initiative</a>
+                <h2>Turning Sad Sidewalks into Snack Stations</h2>
+                <p>Imagine walking down a street that actually has shade, sitting on a solid wooden bench we made from a dead local tree, and picking fresh fruit right off the sidewalk. That’s the kind of neighborhood we're building.</p>
+                <a href="#hero" class="btn" style="background: var(--accent); color: var(--primary); max-width: 250px;">Pitch In</a>
             </div>
             <div class="vision-stats-box">
                 <div class="vision-stat-item">
-                    <h4>Low Maintenance Design</h4>
-                    <p>Perennial food plants require watering only for the first two weeks before becoming self-sustaining.</p>
+                    <h4>Lazy Gardening</h4>
+                    <p>The food we plant only needs watering for the first two weeks. After that, it pretty much takes care of itself.</p>
                 </div>
                 <div class="vision-stat-item">
-                    <h4>Circular Community Upcycling</h4>
-                    <p>We reclaim local wood waste, fallen trees, and stumps to handcraft functional street furniture, turning local debris into community value.</p>
+                    <h4>Making Benches from Debris</h4>
+                    <p>We grab fallen trees and scrap wood and turn them into hand-crafted benches, so local trash becomes local treasure.</p>
                 </div>
             </div>
         </div>
@@ -231,30 +314,30 @@
                     <img src="logo.png" alt="The Butterfly Initiative Logo" class="logo-img footer-logo-img">
                     <span>The Butterfly Initiative</span>
                 </div>
-                <p>Empowering communities through ecological regeneration, sustainable urban agriculture, and climate resilience.</p>
+                <p>Helping neighbors help themselves through green spaces, free food, and not melting in the summer.</p>
             </div>
             <div class="footer-col">
-                <h4>Navigation Links</h4>
+                <h4>Site Links</h4>
                 <ul class="footer-links">
                     <li><a href="#hero">Home</a></li>
-                    <li><a href="#mission">Mission</a></li>
-                    <li><a href="#action">Action Plan</a></li>
-                    <li><a href="#impact">Impact</a></li>
+                    <li><a href="#mission">What We Do</a></li>
+                    <li><a href="#action">The Plan</a></li>
+                    <li><a href="#impact">The Payoff</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Core Focus</h4>
+                <h4>What We Care About</h4>
                 <ul class="footer-links">
-                    <li><a href="#action">Urban Heat Mitigation</a></li>
-                    <li><a href="#action">Edible Perennials</a></li>
-                    <li><a href="#action">Infrastructure Repair</a></li>
-                    <li><a href="#action">Public Benches</a></li>
+                    <li><a href="#action">Cooling the Streets</a></li>
+                    <li><a href="#action">Free Street Food</a></li>
+                    <li><a href="#action">Fixing Things</a></li>
+                    <li><a href="#action">Places to Sit</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 The Butterfly Initiative. All rights reserved.</p>
-            <p>Designed for Community Resilience & Dignity.</p>
+            <p>Made by people who care about their neighborhood.</p>
         </div>
     </footer>
 
@@ -287,7 +370,7 @@
             });
         }, { threshold: 0.1 });
         
-        document.querySelectorAll('.card, .timeline-card').forEach(el => observer.observe(el));
+        document.querySelectorAll('.card, .timeline-card, .parallax-content').forEach(el => observer.observe(el));
     </script>
 
 </body>
